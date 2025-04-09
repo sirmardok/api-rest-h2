@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "0017d2a1-e7b0-4aa7-8e50-b72771666f44",
+		"name": "Api-Rest-H2 NISUM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4669310"
+	},
+	"item": [
+		{
+			"name": "POST-CreateUser-Error-UsuarioExiste",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Migue Garces\",\r\n  \"email\": \"sirmardok1@gmail.com\",\r\n  \"password\": \"mardok2025\",\r\n  \"phones\": [\r\n    {\r\n      \"number\": \"3195618139\",\r\n      \"city\": \"1\",\r\n      \"country\": \"57\"   \r\n            \r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-getAllUsers-ListadoUsuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST-CreateUser-UsuarioDosTelefonos",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Migue Garces\",\r\n  \"email\": \"sirmardok1@gmail.com\",\r\n  \"password\": \"mardok2025\",\r\n  \"phones\": [\r\n    {\r\n      \"number\": \"3195618139\",\r\n      \"city\": \"1\",\r\n      \"country\": \"57\"   \r\n            \r\n    },\r\n    {\r\n      \"number\": \"3136424266\",\r\n      \"city\": \"2\",\r\n      \"country\": \"57\"\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET-getUserById-ObtieneUsuarioUUID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/users/c1f6f8c1-7883-43cc-a274-9fb913fc9839",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"c1f6f8c1-7883-43cc-a274-9fb913fc9839"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
